@@ -1,0 +1,57 @@
+:root {
+    --desktop:url('https://images.unsplash.com/photo-1515248137880-45e105b710e0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1071&q=80');
+
+    --tablet:url('https://images.unsplash.com/photo-1561154464-82e9adf32764?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80');
+
+    --mobile: url('https://images.unsplash.com/photo-1523206489230-c012c64b2b48?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80');
+}
+
+body {
+    background-image: linear-gradient(rgb(243, 211, 104), rgb(199, 199, 199));
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+aside {
+    float: left;
+    width: 20vw;
+    margin: 2vw;
+}
+
+div {
+    float: left;
+    width: 45vw;
+    height: 45vw;
+    background-size: cover;
+    background-position: center;
+    background-image: var(--desktop);
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        background-image: linear-gradient(rgb(112, 112, 236), rgb(199, 199, 199));
+        height: 50vh;
+    }
+
+    div {
+        background-image: var(--tablet);
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        background-image: linear-gradient(rgb(212, 212, 219), rgb(139, 218, 165));
+        height: 100vh;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    div {
+        background-image: var(--mobile);
+    }
+}
+
+/* !!Media queries should come after styles since otherwise will be overwrited */
